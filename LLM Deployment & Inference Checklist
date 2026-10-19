@@ -1,1 +1,21 @@
+## These are all common industry practices and do not, by themselves, reveal sensitive information.
 
+Phase 1: Environment & Weights Initialization
+  [ ] Authenticate with the Hugging Face Hub CLI using a personal developer token to pull base model weights.
+  [ ] Configure the local container runtime (Podman/Docker) with NVIDIA Container Toolkit extensions for direct GPU passthrough.
+  [ ] Verify local CUDA driver availability and VRAM headroom for target model parameter sizes.
+
+Phase 2: Inference Engine & API Pipeline Setup
+  [ ] Deploy the vLLM container image configured with PagedAttention and optimized block sizes for local hardware constraints.
+  [ ] Initialize the asynchronous Python FastAPI application template incorporating streaming token generation endpoints.
+  [ ] Establish connection parameters between the FastAPI backend client and the local vLLM OpenAI-compatible REST server (http://localhost:8000/v1).
+
+Phase 3: Schema Enforcement & Security Hardening
+  [ ] Define strict Pydantic schemas (BaseModel) to validate incoming user payloads and enforce structured JSON outputs from the LLM.
+  [ ] Implement a pre-LLM regex validation and input sanitization layer to strip disallowed control characters and injection vectors.
+  [ ] Enforce system prompt structural isolation using explicit delimiter tags (e.g., <|begin_of_text|>, <|start_header_id|>) to prevent prompt leakage.
+
+Phase 4: Validation & Benchmarking
+  [ ] Execute throughput benchmark scripts (vLLM benchmark utility) to measure time-to-first-token (TTFT) and sustained tokens-per-second metrics.
+  [ ] Run automated integration tests validating asynchronous error handling, streaming chunk delivery, and dropped connection recovery.
+  [ ] Verify logging and telemetry output across specialized evaluation prompt vectors to confirm deterministic execution before production integration.
