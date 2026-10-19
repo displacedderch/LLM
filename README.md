@@ -1,6 +1,6 @@
 # LLM & Prompt Engineering
 
-Welcome to my centralized repository for Large Language Model (LLM) explorations, prompt engineering patterns, evaluation scripts, and experimental workflows. This repo serves as a sandbox and knowledge base for testing, refining, and deploying robust prompts and agentic workflows.
+My centralized repository for Large Language Model (LLM) explorations, prompt engineering patterns, evaluation scripts, and experimental workflows. This repo serves as a sandbox and knowledge base for testing, refining, and deploying robust prompts and agentic workflows.
 
 ---
 
@@ -63,6 +63,7 @@ Here is a quick look at the structure typically used for prompts within this rep
 
 ---
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Disclaimer
+The code, prompts, and architectures published in this repository are my own independent personal projects. 
+They do not represent the views, policies, strategies, or positions of my employer or any affiliated organizations. 
+All work has been developed entirely on personal time using personal resources.
