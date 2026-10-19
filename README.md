@@ -1,4 +1,4 @@
-# LLM & Prompt Engineering Lab 🚀
+# LLM & Prompt Engineering
 
 Welcome to my centralized repository for Large Language Model (LLM) explorations, prompt engineering patterns, evaluation scripts, and experimental workflows. This repo serves as a sandbox and knowledge base for testing, refining, and deploying robust prompts and agentic workflows.
 
